@@ -1,3 +1,6 @@
+// Stores the active TCP connection object
+let connection;
+
 const handleUserInput = (key) => {
   if (key === '\u0003') process.exit();
   let command = 'Move: ';
@@ -15,11 +18,12 @@ const handleUserInput = (key) => {
     command += 'right';
     break;
   }
-  if (command.length > 6) return command;
+  if (command.length > 6) connection.write(command);
 };
 
 // Setup interface to handle user input from stdin
-const setupInput = () =>{
+const setupInput = (conn) =>{
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
