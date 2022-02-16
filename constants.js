@@ -1,4 +1,4 @@
-const IP = '192.168.0.8';
+const IP = '165.227.47.243';
 const PORT = '50541';
 const KEY_MAPPINGS = {
   EXIT: '\u0003',
