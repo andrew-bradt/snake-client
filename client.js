@@ -2,8 +2,8 @@ const net = require('net');
 
 const connect = () => {
   const conn = net.createConnection({
-    host: 'TBD',
-    port: 'TBD'
+    host: '192.168.0.8',
+    port: '50541'
   });
 
   conn.setEncoding('utf8');

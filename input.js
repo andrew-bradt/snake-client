@@ -17,6 +17,18 @@ const handleUserInput = (key) => {
   case 'd':
     command += 'right';
     break;
+  case 'p':
+    connection.write(`Say: ssssssss`);
+    break;
+  case 'o':
+    connection.write(`Say: SsSssss Ss`);
+    break;
+  case 'i':
+    connection.write(`Say: ssss????`);
+    break;
+  case 'l':
+    connection.write(`Say: SSSSSS!`);
+    break;
   }
   if (command.length > 6) connection.write(command);
 };
