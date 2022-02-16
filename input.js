@@ -27,7 +27,7 @@ const handleUserInput = (key) => {
     connection.write(`Say: ssss????`);
     break;
   case 'l':
-    connection.write(`Say: SSSSSS!`);
+    connection.write(`Say: SSSSS!`);
     break;
   }
   if (command.length > 6) connection.write(command);
